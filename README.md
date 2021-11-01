@@ -20,4 +20,6 @@ instruction:
 --set postgres.pvc.name=postgre-data # name of postgres pvc 
 
 --set odoo.ingress.host=testci2.qzhub.net # domain name for ingress
+
+--set odoo.args={"--init=website\,base\, etc."} 
 ```
