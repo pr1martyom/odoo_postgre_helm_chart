@@ -72,6 +72,8 @@ odoo:
     proxyBodySize: 1000m
     host: testci.qzhub.net
     port: 80
+  
+  args: []
 
 postgres:
   

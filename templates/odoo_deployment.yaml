@@ -33,6 +33,9 @@ spec:
         ports:
         - name: {{ .Values.odoo.ports.name  }}
           containerPort: {{ .Values.odoo.ports.containerPort  }}
+        {{- if .Values.odoo.args }}
+        args: {{- include "common.tplvalues.render" (dict "value" .Values.odoo.args "context" $) | nindent 12 }}
+        {{- end }}
         livenessProbe:
           httpGet:
             path: /
